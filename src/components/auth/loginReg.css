@@ -1,0 +1,120 @@
+.center-login{
+    width: 100%;
+    height: 100vh;
+    background: #24282e94;
+}
+
+.login-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.login-container{
+    width: 410px;
+    padding: 30px;
+    background: #24282e;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.9);
+    border-radius: 20px;
+}
+.login-container .login-text{
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+}
+.login-container form{
+    margin-top: -20px;  
+}
+.login-container form .login-data{
+    height: 45px;
+    width: 100%;
+    margin: 40px 0;
+}
+form .login-data input{
+    height: 100%;
+    width: 100%;
+    padding-left: 10px;
+    border: 1px solid #eb1414;
+    border-radius: 20px;
+    outline: none;
+    background: #c0cbcb;
+    color: #eb1414;
+}
+form .login-data label{
+    font-size: 18px;
+}
+form .login-btn{
+    margin: 40px 0;
+    height: 45px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+form .login-btn .login-inner{
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    position: absolute;
+    left: -100%;
+    background: #24282e;
+    z-index: -1;
+    transition: all 0.4s;
+}
+form .login-btn:hover .login-inner{
+   left: 0;
+   background: #eb1414;
+   color: #000;
+}
+
+form .login-btn button{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border: none;
+    background: none;
+    color: #eb1414;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+form .login-btn:hover button{
+    left: 0;
+    background: #eb1414;
+    color: #000;
+ }
+ .register{
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: end;
+    cursor: pointer;
+ }
+ .register:hover{
+    font-weight: 900;
+ }
+ .clear-login{
+    width: 100%;
+    text-align: end;
+    cursor: pointer;
+ }
+.success-message-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 410px;
+    padding: 30px;
+    background: #24282e;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.9);
+    border-radius: 20px;
+    color: #eb1414;
+}
+.success-message{
+    color: #eb1414;
+}
+
+ 

@@ -1,0 +1,24 @@
+.main-container-tv{
+    position: absolute;
+    left: calc(50% - 1px); /* Adjust the value to center the element */
+    transform: translateX(-50%);
+    top: 38%;
+    width: 90%;
+    display: grid;
+    background: #23212100;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+.list-desc-tv{
+    color: #e84118;
+    font-size: 30px;
+    font-weight: 300;
+    position: absolute;
+    right: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 30%;
+    cursor: pointer;
+}

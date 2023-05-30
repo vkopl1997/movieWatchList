@@ -1,0 +1,131 @@
+.personal-main-container{
+    position: absolute;
+    left: calc(50% - 1px); 
+    transform: translateX(-50%);
+    top: 18%;
+    width: 90%;
+    background: #24282e;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.person-info-container{
+    width: 24%;
+    height: 100%;
+    border-radius: 20px;
+    background-color: #181b20;
+}
+.personphoto{
+    width: 190px;
+    height: 190px;
+    background-color: #eb1414;
+    border-radius: 50%;
+    margin: 60px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.photoinphoto{
+    font-size: 130px;
+}
+.user-label{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user-label label{
+    color: #eb1414;
+    font-size: 20px;
+    text-decoration:underline;
+}
+.personname{
+    width: 100%;
+    height: 10%;
+    color: #eb1414;
+    font-size: 20px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.goback-div{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.goback-div .btn-back-personal{
+    background: #eb1414;
+    width: 70%;
+    height: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #9a9696;
+    font-size: 20px;
+    font-weight: 900;
+    border-radius: 20px;
+}
+.watchlist-container{
+    width: 74%;
+}
+.watchlist-title{
+    width: 100%;
+    height: 80px;
+    font-size: 30px;
+    color: #eb1414;
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    padding-left: 20px;
+    border-radius: 20px;
+}
+.watchlist{
+    margin-top: 20px;
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    gap: 20px 10px; 
+    grid-template-areas: 
+      ". ."
+      ". ."
+      ". ."; 
+}
+.watchlist-item{
+    width: 100%;
+}
+.watchlist-poster{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.watchlist-info{
+    width: 100%;
+    color: #eb1414;
+    font-size: 20px;
+    padding: 20px;
+    background-color: #000;
+    border-radius: 20px;
+}
+.id-clear-btn{
+    padding: 4px 20px;
+    background-color: #eb1414;
+    color: #FFF;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.watchlist-empty{
+    width: 90%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #eb1414;
+    font-size: 30px;
+}

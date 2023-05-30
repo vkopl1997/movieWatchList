@@ -1,0 +1,23 @@
+.popularActors-header{
+    width: 90%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    margin: 6% auto;
+}
+.header{
+    color: #eb1414;
+    font-size: 30px;
+}
+.main-container-person{
+    position: absolute;
+    left: calc(50% - 1px); /* Adjust the value to center the element */
+    transform: translateX(-50%);
+    top: 36%;
+    width: 90%;
+    display: grid;
+    background: #23212100;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
