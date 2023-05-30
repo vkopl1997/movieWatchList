@@ -78,7 +78,7 @@
     height: 80px;
     font-size: 30px;
     color: #eb1414;
-    border: 1px solid red;
+    background-color: #181b20;
     display: flex;
     align-items: center;
     text-transform: uppercase;
