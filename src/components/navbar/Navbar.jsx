@@ -1,13 +1,14 @@
 import React, { useContext, useState } from 'react';
 import './navbar.css';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { GenreContext } from '../../contexts/genreContext/GenreContext';
 import { RxAvatar } from 'react-icons/rx';
 import { LoginReg } from '../auth/LoginReg';
-import { BsFillPersonCheckFill } from 'react-icons/bs'
+import { BsFillPersonCheckFill } from 'react-icons/bs';
 
-export const Navbar = () => {
+export const Navbar = ({ onScrollToListDesc }) => {
   const navigate = useNavigate();
+  const location = useLocation();
   const { selectedGenre, setSelectedGenre } = useContext(GenreContext);
   const [showLogin, setShowLogin] = useState(false);
   const isAuthenticated = localStorage.getItem('username') && localStorage.getItem('password');
@@ -39,26 +40,37 @@ export const Navbar = () => {
     setShowLogin(false);
   };
 
-  const handlePersonalPage = () =>{
-    const newPath = '/personalPG'
-    navigate(newPath)
-  }
+  const handlePersonalPage = () => {
+    const newPath = '/personalPG';
+    navigate(newPath);
+  };
 
   return (
-    <div className='main'>
+    <div className="main">
       <div className="left-side">
-        <div onClick={handleMoviesClick} className='title-h2'>Your Movies</div>
+        <div onClick={handleMoviesClick} className="title-h2">
+          Your Movies
+        </div>
       </div>
       <div className="right-side">
-        <div className='nav-link' onClick={handleTvClick}>TV Shows</div>
-        <div className='nav-link' onClick={handleActorsClick}>Actors</div>
+      {location.pathname === '/' && (
+          <div className="nav-link" onClick={onScrollToListDesc}>
+            SEARCH
+          </div>
+        )}
+        <div className="nav-link" onClick={handleTvClick}>
+          TV Shows
+        </div>
+        <div className="nav-link" onClick={handleActorsClick}>
+          Actors
+        </div>
         {isAuthenticated ? (
-          <div className='personpage' onClick={handlePersonalPage}>
-            <BsFillPersonCheckFill/>
+          <div className="personpage" onClick={handlePersonalPage}>
+            <BsFillPersonCheckFill />
           </div>
         ) : (
           <div className="loginform" onClick={handleLogin}>
-            <RxAvatar className='avatar' />
+            <RxAvatar className="avatar" />
             {selectedGenre}
           </div>
         )}

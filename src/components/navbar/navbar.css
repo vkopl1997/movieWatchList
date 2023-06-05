@@ -16,7 +16,7 @@
     cursor: pointer;
 }
 .right-side{
-    width: 30%;
+    width: 50%;
     height: 100%;
     display: flex;
     justify-content: space-evenly;

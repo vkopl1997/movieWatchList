@@ -4,7 +4,7 @@
 
 .search-box{
     position: absolute;
-    top: 22%;
+    top: 106%;
     left: 50%;
     transform: translate(-50%,-50%);
     background: #2f3640;
@@ -22,13 +22,13 @@
     position: absolute;
     left: calc(50% - 1px); /* Adjust the value to center the element */
     transform: translateX(-50%);
-    top: 66%;
     width: 90%;
     display: grid;
     background: #23212100;
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 10px;
     grid-row-gap: 10px;
+    top: 156%;
 }
 .search-btn{
     color: #e84118;
@@ -67,7 +67,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 58.5%;
+    top: 148%;
     cursor: pointer;
 }
 .x-span{
@@ -83,7 +83,7 @@
     position: absolute;
     left: calc(50% - 1px); /* Adjust the value to center the element */
     transform: translateX(-50%);
-    top: 79%;
+    top: 160%;
     width: 90%;
     text-transform: uppercase;
     text-align: center;

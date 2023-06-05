@@ -19,10 +19,12 @@ export const Personal = () => {
     navigate('/');
   };
 
-  const handleClearItem = (itemId) =>{
+  const handleClearItem = (itemId) => {
     const updatedWatchlist = watchlist.filter((item) => item.id !== itemId);
     setWatchlist(updatedWatchlist);
-  }
+    localStorage.setItem('watchlist', JSON.stringify(updatedWatchlist));
+  };
+  
 
   return (
     <div className='personal-main-container'>
@@ -38,7 +40,7 @@ export const Personal = () => {
           <button className='btn-back-personal' onClick={() => navigate('/')}>Go Back</button>
         </div>
         <div className="goback-div">
-          <button className='btn-back-personal' onClick={handleClear}>Clear Acc.</button>
+          <button className='btn-back-personal' onClick={handleClear}>Delete Acc.</button>
         </div>
       </div>
       <div className="watchlist-container">
