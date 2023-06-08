@@ -10,11 +10,29 @@
     display: flex;
     justify-content: space-between;
 }
+.personal-main-container-white{
+    position: absolute;
+    left: calc(50% - 1px); 
+    transform: translateX(-50%);
+    top: 18%;
+    width: 90%;
+    background: #dcdcd1;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
 .person-info-container{
     width: 24%;
     height: 100%;
     border-radius: 20px;
     background-color: #181b20;
+}
+.person-info-container-white{
+    width: 24%;
+    height: 100%;
+    border-radius: 20px;
+    background-color: #eaf4f4;
 }
 .personphoto{
     width: 190px;
@@ -85,6 +103,18 @@
     padding-left: 20px;
     border-radius: 20px;
 }
+.watchlist-title-white{
+    width: 100%;
+    height: 80px;
+    font-size: 30px;
+    color: #eb1414;
+    background-color: #eaf4f4;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    padding-left: 20px;
+    border-radius: 20px;
+}
 .watchlist{
     margin-top: 20px;
     display: grid; 
@@ -110,6 +140,14 @@
     font-size: 20px;
     padding: 20px;
     background-color: #000;
+    border-radius: 20px;
+}
+.watchlist-info-white{
+    width: 100%;
+    color: #eb1414;
+    font-size: 20px;
+    padding: 20px;
+    background-color: #eaf4f4;
     border-radius: 20px;
 }
 .id-clear-btn{

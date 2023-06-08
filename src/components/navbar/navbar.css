@@ -9,6 +9,17 @@
     border-radius: 10px;
     margin: 0 auto;
 }
+.navbar-light-main{
+    width: 98%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    border-radius: 10px;
+    margin: 0 auto;
+    background-color: #dcdcd1;
+}
 .left-side .title-h2{
     color: #eb1414;
     font-size: 40px;
@@ -35,6 +46,30 @@
     width: 46px;
     height: 46px;
     background: #080808;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #eb1414;
+    font-weight: 900;
+}
+.loginform-white{
+    width: 46px;
+    height: 46px;
+    background: #f5f2f2;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #eb1414;
+    font-weight: 900; 
+}
+.personpage-white{
+    width: 46px;
+    height: 46px;
+    background: #f5f2f2;
     border-radius: 50%;
     display: flex;
     justify-content: center;

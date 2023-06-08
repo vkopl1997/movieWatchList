@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './loginReg.css';
 import { MdOutlineClear } from 'react-icons/md';
 import { useNavigate } from 'react-router-dom';
+import { ThemeContext } from '../../contexts/themeContext/ThemContext';
 
 export const LoginReg = ({ handleLoginClose }) => {
   const [register, setRegister] = useState(false);
@@ -9,7 +10,8 @@ export const LoginReg = ({ handleLoginClose }) => {
   const [password, setPassword] = useState('');
   const [registerUsername, setRegisterUsername] = useState('');
   const [registerPassword, setRegisterPassword] = useState('');
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const { isLightTheme } = useContext(ThemeContext);
 
   
 
@@ -52,7 +54,7 @@ export const LoginReg = ({ handleLoginClose }) => {
 
   return (
     <div className='center-login'>
-      <div className="login-container">
+      <div className={isLightTheme? "login-container-white": "login-container"}>
         <div className="clear-login" onClick={handleLoginClose}>
           <MdOutlineClear />
         </div>

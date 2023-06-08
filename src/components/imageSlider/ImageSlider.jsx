@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState ,useContext} from 'react';
 import './imageSlider.css';
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
+import { ThemeContext } from '../../contexts/themeContext/ThemContext';
 
 const API_URL = `https://api.themoviedb.org/3/movie/popular?api_key=2ada23b09a1350182a469aee846b3f9c`;
 const API_IMG = 'https://image.tmdb.org/t/p/w500';
@@ -10,6 +11,9 @@ export const ImageSlider = ({onAddToWatchlist}) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const isAuthenticated = localStorage.getItem('username') && localStorage.getItem('password');
   const [buttonText, setButtonText] = useState('Add to Watchlist');
+  const {isLightTheme} = useContext(ThemeContext);
+
+
 
 
   useEffect(() => {
@@ -67,7 +71,7 @@ export const ImageSlider = ({onAddToWatchlist}) => {
     <div className='slide-container'>
       {currentImage && (
         <div
-          className='image-slide active'
+          className={ isLightTheme? 'image-slide-white' : 'image-slide'}
           style={{ backgroundImage: `url(${API_IMG + currentImage.poster_path})` }}
         >
             <div className="image-title">{currentImage.title}</div>

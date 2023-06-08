@@ -23,19 +23,21 @@
     filter: blur(0px);
     background-color: #24282e;
   }
-  
-  .image-slide.active {
-    transform: translateX(0%);
+  .image-slide-white{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    position: relative;
+    background-position: left;
+    background-repeat: no-repeat;
+    transition: transform 0.5s ease;
+    border-radius: 20px;
+    filter: blur(0px);
+    background-color: #dcdcd1;
+    ;
+
   }
-  
-  .image-slide.next {
-    transform: translateX(100%);
-  }
-  
-  .image-slide.previous {
-    transform: translateX(-100%);
-  }
-  
   .arrow-left {
     position: absolute;
     top: 50%;

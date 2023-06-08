@@ -52,10 +52,10 @@ export const MovieList = ({ listDescRef }) => {
     e.preventDefault();
     setSearchTerm(e.target.elements.search.value);
     e.target.reset();
-    animateScroll.scrollTo('search-section', {
+    animateScroll.scrollTo('#list-desc', {
       smooth: true,
       duration: 500,
-      offset: -100,
+      offset: -100, // Adjust the offset as needed to fit your layout
     });
   };
 
@@ -82,11 +82,11 @@ export const MovieList = ({ listDescRef }) => {
         <MovieGenres onGenreChange={handleGenreChange} setMovies={setMovies} />
         <ImageSlider />
         {searchTerm || selectedGenre ? (
-          <div  onClick={handleClear} className="list-desc">
+          <div id="list-desc" onClick={handleClear} className="list-desc">
             Clear <span className="x-span"><MdClear /></span>
           </div>
         ) : (
-          <div className="list-desc" >Popular Now</div>
+          <div id="list-desc" className="list-desc">Popular Now</div>
         )}
         {movies.length > 1 ? (
           <div className="main-container">
@@ -102,4 +102,5 @@ export const MovieList = ({ listDescRef }) => {
       </div>
     </GenreProvider>
   );
+  
 };

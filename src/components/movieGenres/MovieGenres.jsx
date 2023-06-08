@@ -1,13 +1,14 @@
 import React, { useContext, useEffect, useState, useCallback } from 'react';
 import { GenreContext } from '../../contexts/genreContext/GenreContext';
 import './moviegenres.css';
-
+import { ThemeContext } from '../../contexts/themeContext/ThemContext';
 const API_URL = `https://api.themoviedb.org/3/genre/tv/list?api_key=2ada23b09a1350182a469aee846b3f9c`;
 
 export const MovieGenres = ({ setMovies }) => {
   const { selectedGenre, setSelectedGenre } = useContext(GenreContext);
   const [genres, setGenres] = useState([]);
   const [activeGenre, setActiveGenre] = useState(null);
+  const {isLightTheme} = useContext(ThemeContext);
 
   const fetchMovies = useCallback(async (genreId) => {
     const url = `https://api.themoviedb.org/3/discover/movie?api_key=2ada23b09a1350182a469aee846b3f9c&with_genres=${genreId}`;
@@ -46,11 +47,11 @@ export const MovieGenres = ({ setMovies }) => {
   }, [selectedGenre]);
 
   return (
-    <div className="genres-container">
+    <div className={isLightTheme? "genres-container-white": "genres-container"}>
       {genres.map((genre) => (
         <div
           key={genre.id}
-          className={`genre-item ${activeGenre === genre.id ? 'active' : ''}`}
+          className={isLightTheme? `genre-item-white ${activeGenre === genre.id ? 'active' : ''}`:`genre-item ${activeGenre === genre.id ? 'active' : ''}`}
           onClick={() => handleGenreClick(genre.id)}
         >
           {genre.name}

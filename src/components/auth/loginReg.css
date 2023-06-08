@@ -17,16 +17,42 @@
     box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.9);
     border-radius: 20px;
 }
+.login-container-white{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 410px;
+    padding: 30px;
+    background: #dcdcd1;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.9);
+    border-radius: 20px;
+}
 .login-container .login-text{
     font-size: 35px;
     font-weight: 600;
     text-align: center;
     text-transform: uppercase;
 }
-.login-container form{
-    margin-top: -20px;  
+.login-container-white .login-text{
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
 }
+.login-container form{
+    margin-top: 20px;  
+}
+.login-container-white form{
+    margin-top: 20px;  
+
+} 
 .login-container form .login-data{
+    height: 45px;
+    width: 100%;
+    margin: 40px 0;
+}
+.login-container-white form .login-data{
     height: 45px;
     width: 100%;
     margin: 40px 0;
